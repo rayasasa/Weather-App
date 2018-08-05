@@ -19,10 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public/pages')));
 
-var indexRouter = require('./routes/index');
-var page2Router = require('./routes/page2');
-app.use('/', indexRouter);
-app.use('/page2', page2Router);
+var router = require('./routes/routes');
+app.use('/', router);
+app.use('/page2', router);
 
 /*
 app.get('/', function(req,res){
