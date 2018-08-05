@@ -3,10 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var htmlIndexRoute = require('./routes/html');
+var fs = require("fs");
 
 var app = express();
 app.listen(3010);
@@ -22,26 +19,35 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public/pages')));
 
+var indexRouter = require('./routes/index');
+var page2Router = require('./routes/page2');
+app.use('/', indexRouter);
+app.use('/page2', page2Router);
 
-//app.use('/', indexRouter);
-//app.use('/users', usersRouter);
-
-app.use('/', function(req, res){
-  p = path.join(__dirname, 'public/pages/index.html');
+/*
+app.get('/', function(req,res){
+  p = path.join(__dirname,'public/pages/index.html');
   res.sendFile(p);
-  console.log(p);
 });
 
-app.use('/page2', function(req,res){
+app.get('/page2', function(req,res){
   p = path.join(__dirname, 'public/pages/page2.html');
   res.sendFile(p);
-  console.log(p);
+});
+*/
+
+app.get('/loadIndex', function(req, res){
+  // Get content from file
+  var contents = fs.readFileSync("test.json");
+  // Define to JSON type
+  var jsonContent = JSON.parse(contents);
+  res.json(jsonContent);
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+//app.use(function(req, res, next) {
+//  next(createError(404));
+//});
 
 // error handler
 app.use(function(err, req, res, next) {
