@@ -21,21 +21,14 @@ app.use(express.static(path.join(__dirname, 'public/pages')));
 
 var router = require('./routes/routes');
 app.use('/', router);
-app.use('/page2', router);
+app.use('/santosh', router);
 
-/*
-app.get('/', function(req,res){
-  p = path.join(__dirname,'public/pages/index.html');
+app.get('/suma', function(req,res){
+  p = path.join(__dirname,'public/pages/suma.html');
   res.sendFile(p);
 });
 
-app.get('/page2', function(req,res){
-  p = path.join(__dirname, 'public/pages/page2.html');
-  res.sendFile(p);
-});
-*/
-
-app.get('/loadIndex', function(req, res){
+app.get('/loadSuma', function(req, res){
   // Get content from file
   var contents = fs.readFileSync("test.json");
   // Define to JSON type
