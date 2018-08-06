@@ -36,6 +36,19 @@ app.get('/loadSuma', function(req, res){
   res.json(jsonContent);
 });
 
+app.post('/updateWhatever', function(req, res){
+  // Get content from file
+  var contents = fs.readFileSync("test.json");
+  var jsonContent = JSON.parse(contents);
+  // Get info from req
+  var yourObject = req.body;
+  jsonContent.push(yourObject);
+  // Update json & save
+  fs.writeFile("test.json", JSON.stringify(jsonContent));
+  // Redirect to home
+  p = path.join(__dirname,'public/pages/suma.html');
+  res.sendFile(p);
+});
 // catch 404 and forward to error handler
 //app.use(function(req, res, next) {
 //  next(createError(404));

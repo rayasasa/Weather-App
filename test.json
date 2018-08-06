@@ -1,5 +1,1 @@
-{
-    "day":"August 31st 2018",
-    "time":"6:15",
-    "type":"Endurance"
-}
+[{"Class":"ABC"},{"Class1":"ABCD"},{"class.type":"string:Power","class.slot":"3","class.date":"2","class.notes":"1","submit":"Submit"},{"class.type":"string:Power","class.slot":"2","class.date":"3","class.notes":"2","submit":"Submit"}] 

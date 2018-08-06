@@ -6,3 +6,93 @@ body {
 a {
   color: #00B7FF;
 }
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+.header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height:40px;
+  display:inline-block
+} 
+.header span{
+  font-size:25px;
+  font-family:Georgia;
+  font-style: italic;
+  color:#b5a1b5;
+  padding-top:15px;
+  float: left;
+  margin-left:10px;
+}
+.btn{
+  float: right;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Georgia;
+  color: #b5a1b5;
+  font-size: 20px;
+  background: #f7f7f7;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 5 10 5 10;
+}
+.btn a{
+  color: #b5a1b5;
+}
+.btn:hover {
+    background: #7d5e8a!important;
+    text-decoration: none!important;
+  }
+  .btn-resume {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Georgia;
+    color: #FFC107;
+    font-size: 20px;
+    background: #a19ca1;
+    padding: 2px 8px 2px 8px;
+    text-decoration: none;
+  }
+  
+  .btn-resume:hover {
+    background: #f28448;
+    text-decoration: none;
+  }
+.content{
+  padding-top:50px;
+  left: 0px;
+} 
+.about-content {
+  margin-top: 50px;
+  width: 95%;
+  display: inline-block;
+  min-height:800px;
+}
+.about-content p {
+  padding: 20px 40px 20px 40px;
+  color: black;
+  font-size: 18px;
+  line-height: 35px;
+  word-spacing: 5px;
+  width: 50%;
+  float:right;
+  text-align: justify;
+  max-height: 90%;
+}
+.about-content img {
+  padding-left:20px;
+  float:left;
+  width: 50%;
+  padding-top: 20px;
+}
+
+.liquidFillGaugeText { font-family: Helvetica; font-weight: bold; }
+
+html, body, h1, h2, h3, h4, h5, h6, a, button, li, ul {
+  font-family: 'Roboto';
+}
