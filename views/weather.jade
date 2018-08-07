@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  div.header
+    div.w3-bar.w3-yellow
+      span.title(style = "padding-left:45%; color: gray;font-size:x-large") Weather
+  
+  div 
+    form(method="POST", action="/updateWeather" style = "padding-left:40%; margin-top:20%")
+      input(type="text", name="location", placeholder="Enter location" style = "padding-right:10px; margin-right:20px")
+      input(type="submit")
+    
+    div(style = "padding-left:40%; margin-top:20px;")
+      span Current Weather in #{loc} is #{temp.toFixed(2)}
+    

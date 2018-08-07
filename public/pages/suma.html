@@ -114,17 +114,13 @@ html, body, h1, h2, h3, h4, h5, h6, a, button, li, ul {
     <body ng-app = "otfApp">
         <div class = "header">
             <div class="w3-bar w3-orange">
-                <span>OTF Tracker</span>               
+                <span>Weather Tracker</span>               
             </div>
     </div>
     <div ng-controller = "otfController">
-            Hey {{user}} how was your class today?
-        <form class = "myForm" method="POST" action="/updateWhatever">
-           Type of class : <select name = "class.type" ng-model="class.type" ng-options = "option for option  in class_options"></select> 
-           Time: <input type = "text" name = "class.slot"> 
-           Date: <input type = "text" name = "class.date"> <!--date picker-->
-           Milestone: <input type = "text" name = "class.notes">
-           <input type="submit" name="submit"/>
+        <form class = "myForm" method = "POST" action = "/updateWeather">
+           <input type = "text" name = "location" placeholder = "Enter Location" ng-model = "location">
+           <input type = "Submit" ng-click = "getWeather()"/>
         </form>
     </div>
     </body>

@@ -96,3 +96,8 @@ body {
 html, body, h1, h2, h3, h4, h5, h6, a, button, li, ul {
   font-family: 'Roboto';
 }
+
+.title{
+  padding-left:50%;
+  color:gray;
+}

@@ -1,1 +1,2 @@
-[{"Class":"ABC"},{"Class1":"ABCD"},{"class.type":"string:Power","class.slot":"3","class.date":"2","class.notes":"1","submit":"Submit"},{"class.type":"string:Power","class.slot":"2","class.date":"3","class.notes":"2","submit":"Submit"}] 
+[{"Class":"ABC"},{"Class1":"ABCD"},{"class.type":"string:Power","class.slot":"3","class.date":"2","class.notes":"1","submit":"Submit"},{"class.type":"string:Power","class.slot":"2","class.date":"3","class.notes":"2","submit":"Submit"},
+      {"class.type":"string:Strength","class.slot":"","class.date":"","class.notes":"","submit":"Submit"}]
